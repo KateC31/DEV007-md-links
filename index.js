@@ -3,6 +3,7 @@ const fs = require("fs");
 
 const mdLinks = (pathArgv, options) => {
   const relativePath = process.argv[2];
+  const validateOption = process.argv.includes("--validate") || process.argv.includes("--v");
  //const validateOption = process.argv.includes("--validate");
 
  let userPath;
@@ -10,7 +11,7 @@ const mdLinks = (pathArgv, options) => {
   if (fs.existsSync(relativePath)) {
     // console.log("La ruta SI existe");
   } else {
-  //console.log("NO se encontró una ruta");
+  console.log("NO se encontró una ruta");
   }
 //verificar si la ruta es absoluta o es relativa
   if (path.isAbsolute(relativePath) === false) {
@@ -39,27 +40,39 @@ while ((result = regExp.exec(texto)) !== null) {
   };
   links.push(objet);
   }
- if (!options) {
+ if (validateOption) {
 //Desde acá empieza la validación
 let arrayDePromesas = [];
 links.forEach((links) => {
   arrayDePromesas.push(fetch(links.href));
-})
-Promise.all(arrayDePromesas).then((data) => {
-const codes = data.map((Response) => Response.status);
-  console.log(codes);
-  //console.log(arrayDePromesas);
 });
-
-} else {
+return Promise.all(arrayDePromesas).then((responses) => {
+const results = responses.map((response, index) => {
+const link = links[index];
+return {
+href: link.href,
+text: link.text,
+file: link.file,
+status: response.status,
+ok: response.ok ? "ok" : "fail",
+};
+});
+console.log(results);
+})
+.catch((error) => {
+  console.error("Error al realizar las peticiones HTTP:",error);
+  return[];
+});
+ } else {
   console.log(links);
-}
+ }
 } else {
-console.log("No lo puedo leer, no es archivo MD");
+  console.log("No se puede leer, no es archivo MD");
 }
-  }
+};
+
 mdLinks();
 
 module.exports = {
   mdLinks,
-}
+};
