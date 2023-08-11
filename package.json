@@ -9,6 +9,9 @@
     "version": "6.3.0",
     "commit": "e129ade681adff8cbb19f82e63f688fef2f08f32"
   },
+  "scripts": {
+    "test": "jest --coverage"
+  },
   "dependencies": {
     "node-fetch": "^3.3.2"
   },

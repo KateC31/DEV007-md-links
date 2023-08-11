@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 
-const mdLinks = (pathArgv, options) => {
+const mdLinks = () => {
   const relativePath = process.argv[2];
   const validateOption =
     process.argv.includes("--validate") || process.argv.includes("--v");

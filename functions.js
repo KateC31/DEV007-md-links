@@ -12,4 +12,23 @@ const rutaAbsoluta = (ruta) => {
  }
 };
 
-module.exports = {verificarRuta, rutaAbsoluta};
+const extencionRuta = (ruta) => {
+   return path.extname(ruta);
+ };
+ 
+ const extraerLinks = (ruta, contenido) => {
+   const regExp = /\[(.*?)\]\((?!#)(.*?)\)/g;
+   let result;
+   let links = [];
+   while ((result = regExp.exec(contenido)) !== null) {
+     let objet = {
+       href: result[(0, 2)],
+       text: result[(0, 1)],
+       file: ruta,
+     };
+     links.push(objet);
+   }
+   return links;
+ };
+
+module.exports = {verificarRuta, rutaAbsoluta, extencionRuta, extraerLinks};
