@@ -5,7 +5,7 @@
 * [1. Documentación técnica de la libreria](#1-Documentación)
 * [2. Diagrama de flujo](#2-Diagrama)
 * [3. Guía de uso e instalación de la librería](#3-Guía)
-* [4. Board](#5-board)
+* [4. Board](#4-board)
 ***
 
 ## 1. Documentación técnica de la libreria
@@ -134,7 +134,7 @@ Broken: 1
 
 ## 2. Diagrama de flujo
 
-![Diagrama de flujo](/Img-readme/Diagrama-md.png)
+![Diagrama de flujo](https://github.com/KateC31/DEV007-md-links/blob/main/Img-readme/Diagrama-md.png)
 
 ## 3. Guía de uso e instalación de la librería 
 
@@ -157,29 +157,29 @@ npm i Kathe_md-links
 #### Ejemplos:
 
 #### mdLinks
-![Md-links](/Img-readme/Md.png)
+![Md-links](https://github.com/KateC31/DEV007-md-links/blob/main/Img-readme/Md.png)
 #### mdLinks+path
-![Diagrama de flujo](/Img-readme/validateresultado.png)
+![M](https://github.com/KateC31/DEV007-md-links/blob/main/Img-readme/validateresultado.png)
 #### mdLinks+path+options(una o amabas)
 ***
 #### --validate
-![Validate](/Img-readme/validate.png)
-![Validate](/Img-readme/--validate.png)
+![Validate](https://github.com/KateC31/DEV007-md-links/blob/main/Img-readme/validate.png)
+![Validate](https://github.com/KateC31/DEV007-md-links/blob/main/Img-readme/--validate.png)
 
 #### --stats
-![Stats](/Img-readme/stats.png)
-![Stats](/Img-readme/stats-resultado-código.png)
+![Stats](https://github.com/KateC31/DEV007-md-links/blob/main/Img-readme/stats.png)
+![Stats](https://github.com/KateC31/DEV007-md-links/blob/main/Img-readme/stats-resultado-c%C3%B3digo.png)
 
 #### --stats y --validate
-![stats y validate](/Img-readme/stats-validate.png)
-![stats y validate](/Img-readme/conteo-stats-y-validate.png)
+![stats y validate](https://github.com/KateC31/DEV007-md-links/blob/main/Img-readme/stats-validate.png)
+![stats y validate](https://github.com/KateC31/DEV007-md-links/blob/main/Img-readme/conteo-stats-y-validate.png)
 
 
 ## 4. Board
 El proyecto se trabajo en 4 Sprints, en los cuales se organizo segun Diagrama de flujo establecido.
 
-![Planificación](/Img-readme/trello.PNG)
-![Sprints](/Img-readme/TrelloSprints.PNG)
+![Planificación](https://github.com/KateC31/DEV007-md-links/blob/main/Img-readme/trello.PNG)
+![Sprints](https://github.com/KateC31/DEV007-md-links/blob/main/Img-readme/TrelloSprints.PNG)
 
 
 
