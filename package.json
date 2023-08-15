@@ -1,8 +1,14 @@
 {
-  "name": "md-links",
+  "name": "Kathe_md-links",
+  "author": "Kathe C.",
   "version": "0.1.0",
+  "description": "herramienta de línea de comando (CLI) así como tu propia librería (o biblioteca - library) en JavaScript.",
+  "main": "index.js",
   "engines": {
     "node": ">=16.x"
+  },
+  "bin": {
+    "mdLinks": "index.js"
   },
   "bootcamp": {
     "createdAt": "2023-06-20T14:05:58.211Z",
